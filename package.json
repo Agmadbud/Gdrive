@@ -1,0 +1,29 @@
+{
+  "name": "telegram-upload-bot",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "pm2:start": "pm2 start ecosystem.config.js --env production",
+    "pm2:stop": "pm2 stop telegram-upload-bot",
+    "pm2:restart": "pm2 restart telegram-upload-bot",
+    "pm2:logs": "pm2 logs telegram-upload-bot",
+    "pm2:status": "pm2 status telegram-upload-bot",
+    "pm2:delete": "pm2 delete telegram-upload-bot"
+  },
+  "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
+    "node-telegram-bot-api": "^0.64.0",
+    "googleapis": "^128.0.0",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2",
+    "winston": "^3.11.0",
+    "form-data": "^4.0.0",
+    "pm2": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
